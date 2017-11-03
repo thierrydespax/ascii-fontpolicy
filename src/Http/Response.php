@@ -12,7 +12,7 @@ class Response
         $this->body = "";
         $this->reason = "OK";
         $this->header = [];
-        $this->status = "200";     
+        $this->status = 200;     
     }
     
     public function setStatus(int $status, string $reason)
