@@ -7,7 +7,7 @@ class Response
 
     private $status, $reason, $header, $body;
     
-    public function __construct ($property )
+    public function __construct ()
     {
         $this->body = "";
         $this->reason = "OK";

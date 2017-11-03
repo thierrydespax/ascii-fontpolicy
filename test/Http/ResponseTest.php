@@ -33,11 +33,11 @@ Class ResponseTest extends \PHPUnit\Framework\TestCase
     public function testConstruct ($propName, $value )
     {
         $class = new \ReflectionClass(Response::class);
-        $status = $class->getProperty($propName);
-        $status->setAccessible(true);
+        $prop = $class->getProperty($propName);
+        $prop->setAccessible(true);
         $response = $class->newInstanceArgs([]);
         $this->assertTrue(
-            $value ===$prop->getValue($response)
+            $value === $prop->getValue($response)
          );        
         
     }
